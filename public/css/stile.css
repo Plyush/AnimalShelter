@@ -24,7 +24,8 @@ ul, li {
     color: #cdcdcd;
 }
 
-.menu__item a:hovera{
+.menu__item a:hover{
     width: 100%;
+    color: aqua;
 
 }
