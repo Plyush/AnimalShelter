@@ -1,0 +1,30 @@
+@import url(fonts.css);
+
+h1 {
+    font-family: 'Georgia';
+    font-size: 32px;
+    color: #f1cdb3;
+}
+ul, li {
+    display:block;
+    padding: 0;
+    margin: 0;
+}
+.menu-bar {
+    padding: 60px 0;
+    color: #cdcdcd;
+}
+.menu__item {
+    margin-left: 37px;
+}
+.menu__item a {
+    text-decoration: none;
+    font-family: 'Arial';
+    font-size: 15px;
+    color: #cdcdcd;
+}
+
+.menu__item a:hovera{
+    width: 100%;
+
+}
