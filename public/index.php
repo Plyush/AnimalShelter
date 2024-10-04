@@ -25,8 +25,8 @@
         <div class="col-xl-5 m-lg-auto align-self-center">
             <nav>
         <ul class="menu d-flex justify-content-end">
-            <li class="menu__item"><a href="#">Our pets</a></li>
             <li class="menu__item"><a href="#">About the shelter</a></li>
+            <li class="menu__item"><a href="#">Our pets</a></li>
             <li class="menu__item"><a href="#">To help the shelter</a></li>
             <li class="menu__item"><a href="#">Contacts</a></li>
         </ul>
