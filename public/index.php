@@ -22,7 +22,7 @@
         <h1 class="logo">Cozy House</h1>        
         </div>
 
-        <div class="col-xl-5 m-lg-auto align-self-center">
+        <div class="col-xl-9 m-lg-auto align-self-center">
             <nav>
         <ul class="menu d-flex justify-content-end">
             <li class="menu__item"><a href="#">About the shelter</a></li>
