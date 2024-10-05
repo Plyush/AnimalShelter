@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Open index.html",
-            "file": "d:\\domains\\AnimalShelter\\index.html"
+            "file": "${workspaceFolder}/index.html"
         }
     ]
 }
