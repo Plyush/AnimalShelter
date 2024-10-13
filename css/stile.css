@@ -1,10 +1,83 @@
 @import url(fonts.css);
 
-h1 {
+.Logo {
     font-family: 'Georgia';
     font-size: 32px;
     color: #f1cdb3;
 }
+.LogoDescription {
+    font-family: 'Arial';
+    font-size: 13px;
+    color: #ffffff;
+}
+
+.Titel{
+    font-family: 'Georgia';
+    font-size: 44px;
+    color: #ffffff;
+}
+.TitelDescription{
+    font-family: 'Arial';
+    font-size: 15px;
+    color: #cdcdcd;
+}
+.Button{
+    display: inline-block;
+    padding: 15px;
+    margin-top: 46px;
+    border-radius: 26px;
+    box-shadow: 0 0 40px 40px #f1cdb3 inset, 0 0 0 0 #f1cdb3;
+    font-family: 'Georgia';
+    font-size: 17px;
+    color: #292929;
+    text-decoration: none;
+}
+.ButtonSlider{
+    border: 1px #f1cdb3 solid;
+    display: inline-block;
+    padding: 15px;
+    margin-top: 46px;
+    border-radius: 26px;
+    box-shadow: 0 0 40px 40px #ffffff inset, 0 0 0 0 #ffffff;
+    font-family: 'Georgia';
+    font-size: 17px;
+    color: #292929;
+    text-decoration: none;
+}
+
+.ButtonSlider:hover {
+   
+    display: inline-block;
+    padding: 15px;
+    margin-top: 46px;
+    border-radius: 26px;
+    box-shadow: 0 0 40px 40px #f1cdb3 inset, 0 0 0 0 #f1cdb3;
+    font-family: 'Georgia';
+    font-size: 17px;
+    color: #292929;
+    text-decoration: none;
+}
+
+.TextTitel{
+
+    letter-spacing: 60;
+    line-height: 45px;
+    font-family: 'Georgia';
+    font-size: 35px;
+    color: #545454;
+}
+
+
+
+.Text{
+    letter-spacing: 0;
+    line-height: 24px;
+    font-family: 'Arial';
+    font-size: 15px;
+    color: #4c4c4c;
+}
+
+
 ul, li {
     display:block;
     padding: 0;
@@ -30,9 +103,75 @@ ul, li {
 }
 
 .menu__item a:hover{
+    color: #ffffff;
     text-decoration: underline;
     text-underline-offset: 6px;
     text-decoration-thickness: 3px;
     text-decoration-color: #f1cdb3;
 
+}
+.carousel-inner {
+    padding: 1em;
+  }
+  .card {
+    background-color: #fafafa;
+    margin: 0 0.5em;
+    border: none;
+  }
+  .carousel-control-prev,
+  .carousel-control-next {
+    margin-left: -100px;
+    margin-right: -100px;
+    border: 2px #f1cdb3 solid;
+    background-color: #ffffff;
+    width: 6vh;
+    height: 6vh;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .carousel-control-prev:hover,
+  .carousel-control-next:hover {
+    margin-left: -100px;
+    margin-right: -100px;
+    background-color: #f1cdb3;
+    width: 6vh;
+    height: 6vh;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  @media (min-width: 768px) {
+    .carousel-item {
+      margin-right: 0;
+      flex: 0 0 33.333333%;
+      display: block;
+    }
+    .carousel-inner {
+      display: flex;
+    }
+  }
+  .card .img-wrapper {
+      max-width: 100%;
+      height: 13em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .card img {
+      max-height: 100%;
+  }
+  @media (max-width: 767px) {
+    .card .img-wrapper {
+      height: 17em;
+    }
+  }
+.carousel-control-next,
+.carousel-control-prev{
+    color: #000000;
+}
+.carousel-control-next:hover,
+.carousel-control-prev:hover{
+    color: #000000;
 }
