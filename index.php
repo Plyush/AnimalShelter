@@ -19,13 +19,16 @@
     <div class="row">
         
         <div id="logo" class="col-xl-2">
-        <h1 class="logo">Cozy House</h1>        
+        <h1 class="logo">Cozy House</h1>
+        </div>
+        <div id="logo" class="col-xl-2">
+        <h1 class="logo">Cozy House</h1>
         </div>
 
         <div class="col-xl-9 m-lg-auto align-self-center">
             <nav>
         <ul class="menu d-flex justify-content-end">
-            <li class="menu__item"><a href="#">About the shelter 1</a></li>
+            <li class="menu__item"><a href="#">About the shelter</a></li>
             <li class="menu__item"><a href="#">Our pets</a></li>
             <li class="menu__item"><a href="#">To help the shelter</a></li>
             <li class="menu__item"><a href="#">Contacts</a></li>
