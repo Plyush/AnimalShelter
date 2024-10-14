@@ -32,6 +32,18 @@
     color: #292929;
     text-decoration: none;
 }
+.ButtonPay{
+    
+    display: inline-block;
+    padding: 15px;
+    border-radius: 26px;
+    box-shadow: 0 0 40px 40px #f1cdb3 inset, 0 0 0 0 #f1cdb3;
+    font-family: 'Georgia';
+    font-size: 17px;
+    color: #292929;
+    text-decoration: none;
+}
+
 .ButtonSlider{
     border: 1px #f1cdb3 solid;
     display: inline-block;
@@ -77,6 +89,16 @@
     color: #4c4c4c;
 }
 
+.IconName {
+    font-family: 'Georgia';
+    font-size: 20px;
+    color: #545454;
+}
+.card-title {
+    font-family: 'Georgia';
+    font-size: 20px;
+    color: #545454;
+}
 
 ul, li {
     display:block;
@@ -174,4 +196,14 @@ ul, li {
 .carousel-control-next:hover,
 .carousel-control-prev:hover{
     color: #000000;
+}
+
+.FooterBar {
+    width: 100%; 
+    height: 362px;
+    background-image: url(../img/FooterBackground.png); 
+    background-size: cover; 
+    background-position: center; 
+
+color: #cdcdcd;
 }
