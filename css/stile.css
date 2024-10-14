@@ -183,10 +183,12 @@ ul, li {
       align-items: center;
   }
   .card img {
+    
       max-height: 100%;
   }
   @media (max-width: 767px) {
     .card .img-wrapper {
+        
       height: 17em;
     }
   }
@@ -204,6 +206,21 @@ ul, li {
     background-image: url(../img/FooterBackground.png); 
     background-size: cover; 
     background-position: center; 
-    padding: 60px 0;
 color: #cdcdcd;
+}
+.TextTitelFooter{
+
+    letter-spacing: 60;
+    line-height: 45px;
+    font-family: 'Georgia';
+    font-size: 35px;
+    color: #ffffff;
+}
+
+.Сontacts{
+font-family: 'Times New Roman';
+font-size: 20px; 
+color: #f1cdb3;
+text-decoration: none;
+
 }
