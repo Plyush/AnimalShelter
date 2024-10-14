@@ -1,4 +1,13 @@
 @import url(fonts.css);
+.menu-bar {
+    width: 100%; 
+    height: 925px;
+    background-image: url(../img/Background.png); 
+    background-size: cover; 
+    background-position: center; 
+padding: 60px 0;
+color: #cdcdcd;
+}
 
 .Logo {
     font-family: 'Georgia';
@@ -105,15 +114,7 @@ ul, li {
     padding: 0;
     margin: 0;
 }
-.menu-bar {
-        width: 100%; 
-        height: 925px;
-        background-image: url(../img/Background.png); 
-        background-size: cover; 
-        background-position: center; 
-    padding: 60px 0;
-    color: #cdcdcd;
-}
+
 .menu__item {
     margin-left: 37px;
 }
@@ -197,13 +198,12 @@ ul, li {
 .carousel-control-prev:hover{
     color: #000000;
 }
-
 .FooterBar {
     width: 100%; 
     height: 362px;
     background-image: url(../img/FooterBackground.png); 
     background-size: cover; 
     background-position: center; 
-
+    padding: 60px 0;
 color: #cdcdcd;
 }
