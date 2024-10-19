@@ -224,3 +224,12 @@ color: #f1cdb3;
 text-decoration: none;
 
 }
+
+.btn-close{
+    display: block;
+		    float:right;
+		    position:relative;
+		    top:-50px;
+		    right: -50px;
+		    z-index: 99999;
+}
