@@ -30,6 +30,18 @@ color: #cdcdcd;
     color: #ffffff;
 }
 
+.Logo-Pets {
+    font-family: 'Georgia';
+    font-size: 32px;
+    color: #545454;
+}
+.LogoDescription-Pets {
+    font-family: 'Arial';
+    font-size: 13px;
+    color: #545454;
+}
+
+
 .Titel{
     font-family: 'Georgia';
     font-size: 44px;
@@ -135,6 +147,8 @@ ul, li {
     color: #cdcdcd;
 }
 
+
+
 .menu__item a:hover{
     color: #ffffff;
     text-decoration: underline;
@@ -143,6 +157,29 @@ ul, li {
     text-decoration-color: #f1cdb3;
 
 }
+
+.menu__item-Pets {
+    margin-left: 37px;
+}
+
+.menu__item-Pets a {
+    text-decoration: none;
+    font-family: 'Arial';
+    font-size: 15px;
+    color: #545454;
+}
+
+
+
+.menu__item-Pets a:hover{
+    color: #545454;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    text-decoration-thickness: 3px;
+    text-decoration-color: #f1cdb3;
+
+}
+
 .carousel-inner {
     padding: 1em;
   }
