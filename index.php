@@ -31,59 +31,6 @@
     <title>Animal Shelter</title>
   </head>
 
-  <header class="menu-bar">
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-2">
-          <tr>
-            <h1 class="Logo">Cozy House</h1>
-          </tr>
-          <tr>
-            <h2 class="LogoDescription">Shelter for pets in Boston</h2>
-          </tr>
-        </div>
-
-        <div class="col-xl-9 m-lg-auto align-self-center">
-          <nav>
-            <ul class="menu d-flex justify-content-end">
-              <li class="menu__item"><a href="#">About the shelter</a></li>
-              <li class="menu__item"><a href="#">Our pets</a></li>
-              <li class="menu__item"><a href="#">To help the shelter</a></li>
-              <li class="menu__item"><a href="#">Contacts</a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="row" style="height: 347px; display: grid; align-items: end">
-        <div class="col-xl-4">
-          <h3 class="Titel">
-            Not only people<br />
-            need a house
-          </h3>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-xl-5">
-          <h4 class="TitelDescription">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
-            gravida <br />
-            est in porttitor porttitor. Duis sodales elementum ipsum, vehicula
-            <br />
-            condimentum erat fringilla et.
-          </h4>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xl-2">
-          <a href="" class="Button">Make a friend</a>
-        </div>
-      </div>
-    </div>
-  </header>
   <script
     src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
@@ -110,6 +57,9 @@
   </script>
 
   <body>
+  <?php include 'header.html'; ?>
+    
+    
     <div class="container">
       <div
         class="row justify-content-center align-items-center justify-content-around"
@@ -640,8 +590,12 @@
             et malesuada fames ac ante ipsum primis in faucibus. <br />
           </p>
         </div>
+
       </div>
     </div>
+    
+        <?php include 'footer.html'; ?>
+
   </body>
 
 
@@ -651,10 +605,6 @@
 
 
 
-
-<!--#include file="footer.html"-->
-
-<!-- <?php include 'footer.html'; ?> -->
 
 
   <script
