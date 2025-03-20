@@ -282,3 +282,14 @@ text-decoration: none;
 		    right: -100px;
 		    z-index: 99999;
 }
+
+
+
+.modal-dialog {
+
+    background-color: rgba(255, 255, 255, 0)!important;
+  }
+
+  .modal-backdrop {
+    background-color: rgba(0, 0, 0, 0); /* Полностью прозрачный фон */
+  }
