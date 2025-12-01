@@ -58,26 +58,12 @@
 
   <body>
 
-  <script>
-        // Функция для загрузки и вставки HTML из файла
-        function includeHTML(filePath, elementId) {
-            fetch(filePath)
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById(elementId).innerHTML = data;
-                })
-                .catch(error => console.error('Error loading HTML:', error));
-        }
-
-        // Вызываем функцию для хедера и футера
-        includeHTML('header.html', 'header-placeholder');
-        includeHTML('footer.html', 'footer-placeholder');
-    </script>
+  
     
       <!-- Контейнер для хедера -->
     <div id="header-placeholder"></div>
 
-    
+
     <div class="container">
       <div
         class="row justify-content-center align-items-center justify-content-around"
@@ -612,14 +598,31 @@
       </div>
     </div>
     
+<!-- Контейнер для футера -->
+    <div id="footer-placeholder"></div>
         
+
+
+<script>
+        // Функция для загрузки и вставки HTML из файла
+        function includeHTML(filePath, elementId) {
+            fetch(filePath)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById(elementId).innerHTML = data;
+                })
+                .catch(error => console.error('Error loading HTML:', error));
+        }
+
+        // Вызываем функцию для хедера и футера
+        includeHTML('header.html', 'header-placeholder');
+        includeHTML('footer.html', 'footer-placeholder');
+    </script>
 
   </body>
 
 
 
-<!-- Контейнер для футера -->
-    <div id="footer-placeholder"></div>
 
 
 
