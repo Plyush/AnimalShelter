@@ -1,22 +1,23 @@
 @import url(fonts.css);
+
 .menu-bar {
-    width: 100%; 
+    width: 100%;
     height: 925px;
-    background-image: url(../img/Background.png); 
-    background-size: cover; 
-    background-position: center; 
-padding: 60px 0;
-color: #cdcdcd;
+    background-image: url(../img/Background.png);
+    background-size: cover;
+    background-position: center;
+    padding: 60px 0;
+    color: #cdcdcd;
 }
 
 .menu-bar-pets {
-    width: 100%; 
+    width: 100%;
     height: 120px;
     text-emphasis-color: #545454;
-    background-size: cover; 
-    background-position: center; 
-padding: 60px ;
-color: #cdcdcd;
+    background-size: cover;
+    background-position: center;
+    padding: 60px;
+    color: #cdcdcd;
 }
 
 .Logo {
@@ -24,6 +25,7 @@ color: #cdcdcd;
     font-size: 32px;
     color: #f1cdb3;
 }
+
 .LogoDescription {
     font-family: 'Arial';
     font-size: 13px;
@@ -35,6 +37,7 @@ color: #cdcdcd;
     font-size: 32px;
     color: #545454;
 }
+
 .LogoDescription-Pets {
     font-family: 'Arial';
     font-size: 13px;
@@ -42,17 +45,19 @@ color: #cdcdcd;
 }
 
 
-.Titel{
+.Titel {
     font-family: 'Georgia';
     font-size: 44px;
     color: #ffffff;
 }
-.TitelDescription{
+
+.TitelDescription {
     font-family: 'Arial';
     font-size: 15px;
     color: #cdcdcd;
 }
-.Button{
+
+.Button {
     display: inline-block;
     padding: 15px;
     margin-top: 46px;
@@ -63,8 +68,9 @@ color: #cdcdcd;
     color: #292929;
     text-decoration: none;
 }
-.ButtonPay{
-    
+
+.ButtonPay {
+
     display: inline-block;
     padding: 15px;
     border-radius: 26px;
@@ -75,7 +81,7 @@ color: #cdcdcd;
     text-decoration: none;
 }
 
-.ButtonSlider{
+.ButtonSlider {
     border: 1px #f1cdb3 solid;
     display: inline-block;
     padding: 15px;
@@ -89,7 +95,7 @@ color: #cdcdcd;
 }
 
 .ButtonSlider:hover {
-   
+
     display: inline-block;
     padding: 15px;
     margin-top: 46px;
@@ -101,7 +107,7 @@ color: #cdcdcd;
     text-decoration: none;
 }
 
-.TextTitel{
+.TextTitel {
 
     letter-spacing: 60;
     line-height: 45px;
@@ -112,7 +118,7 @@ color: #cdcdcd;
 
 
 
-.Text{
+.Text {
     letter-spacing: 0;
     line-height: 24px;
     font-family: 'Arial';
@@ -125,14 +131,16 @@ color: #cdcdcd;
     font-size: 20px;
     color: #545454;
 }
+
 .card-title {
     font-family: 'Georgia';
     font-size: 20px;
     color: #545454;
 }
 
-ul, li {
-    display:block;
+ul,
+li {
+    display: block;
     padding: 0;
     margin: 0;
 }
@@ -140,6 +148,7 @@ ul, li {
 .menu__item {
     margin-left: 37px;
 }
+
 .menu__item a {
     text-decoration: none;
     font-family: 'Arial';
@@ -149,7 +158,7 @@ ul, li {
 
 
 
-.menu__item a:hover{
+.menu__item a:hover {
     color: #ffffff;
     text-decoration: underline;
     text-underline-offset: 6px;
@@ -171,7 +180,7 @@ ul, li {
 
 
 
-.menu__item-Pets a:hover{
+.menu__item-Pets a:hover {
     color: #545454;
     text-decoration: underline;
     text-underline-offset: 6px;
@@ -182,14 +191,16 @@ ul, li {
 
 .carousel-inner {
     padding: 1em;
-  }
-  .card {
+}
+
+.card {
     background-color: #fafafa;
     margin: 0 0.5em;
     border: none;
-  }
-  .carousel-control-prev,
-  .carousel-control-next {
+}
+
+.carousel-control-prev,
+.carousel-control-next {
     margin-left: -100px;
     margin-right: -100px;
     border: 2px #f1cdb3 solid;
@@ -199,9 +210,10 @@ ul, li {
     border-radius: 50%;
     top: 50%;
     transform: translateY(-50%);
-  }
-  .carousel-control-prev:hover,
-  .carousel-control-next:hover {
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
     margin-left: -100px;
     margin-right: -100px;
     background-color: #f1cdb3;
@@ -210,52 +222,78 @@ ul, li {
     border-radius: 50%;
     top: 50%;
     transform: translateY(-50%);
-  }
+    color: #000000 !important;
+}
 
-  @media (min-width: 768px) {
+.carousel-control-prev:active,
+.carousel-control-next:active,
+.carousel-control-prev:focus,
+.carousel-control-next:focus {
+    margin-left: -100px;
+    margin-right: -100px;
+    background-color: #f1cdb3;
+    width: 6vh;
+    height: 6vh;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #000000 !important;
+    outline: none;
+    box-shadow: none;
+}
+
+@media (min-width: 768px) {
     .carousel-item {
-      margin-right: 0;
-      flex: 0 0 33.333333%;
-      display: block;
+        margin-right: 0;
+        flex: 0 0 33.333333%;
+        display: block;
     }
+
     .carousel-inner {
-      display: flex;
+        display: flex;
     }
-  }
-  .card .img-wrapper {
-      max-width: 100%;
-      height: 13em;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  }
-  .card img {
-    
-      max-height: 100%;
-  }
-  @media (max-width: 767px) {
+}
+
+.card .img-wrapper {
+    max-width: 100%;
+    height: 13em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card img {
+
+    max-height: 100%;
+}
+
+@media (max-width: 767px) {
     .card .img-wrapper {
-        
-      height: 17em;
+
+        height: 17em;
     }
-  }
+}
+
 .carousel-control-next,
-.carousel-control-prev{
+.carousel-control-prev {
     color: #000000;
 }
+
 .carousel-control-next:hover,
-.carousel-control-prev:hover{
+.carousel-control-prev:hover {
     color: #000000;
 }
+
 .FooterBar {
     width: 100%;
     height: 362px;
-    background-image: url(../img/FooterBackground.png); 
-    background-size: cover; 
-    background-position: center; 
-color: #cdcdcd;
+    background-image: url(../img/FooterBackground.png);
+    background-size: cover;
+    background-position: center;
+    color: #cdcdcd;
 }
-.TextTitelFooter{
+
+.TextTitelFooter {
 
     letter-spacing: 60;
     line-height: 45px;
@@ -264,32 +302,33 @@ color: #cdcdcd;
     color: #ffffff;
 }
 
-.Сontacts{
-font-family: 'Times New Roman';
-font-size: 20px; 
-color: #f1cdb3;
-text-decoration: none;
+.Сontacts {
+    font-family: 'Times New Roman';
+    font-size: 20px;
+    color: #f1cdb3;
+    text-decoration: none;
 
 }
 
-.btn-close{
-            width: 100px;
-            height: 100px;
-            display: block;
-		    float:right;
-		    position:relative;
-		    top:-100px;
-		    right: -100px;
-		    z-index: 99999;
+.btn-close {
+    width: 100px;
+    height: 100px;
+    display: block;
+    float: right;
+    position: relative;
+    top: -100px;
+    right: -100px;
+    z-index: 99999;
 }
 
 
 
 .modal-dialog {
 
-    background-color: rgba(255, 255, 255, 0)!important;
-  }
+    background-color: rgba(255, 255, 255, 0) !important;
+}
 
-  .modal-backdrop {
-    background-color: rgba(0, 0, 0, 0); /* Полностью прозрачный фон */
-  }
+.modal-backdrop {
+    background-color: rgba(0, 0, 0, 0);
+    /* Полностью прозрачный фон */
+}
