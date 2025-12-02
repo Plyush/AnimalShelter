@@ -762,34 +762,54 @@ body {
     }
 }
 
-/* Strong overrides: keep controls visible and restore their standard sides.
-   `.carousel-control-prev` — LEFT of the carousel; `.carousel-control-next` — RIGHT of the carousel. */
+/* Place carousel controls at the very edges of the viewport (fixed) */
 .carousel-control-prev,
 .carousel-control-next {
+    position: fixed !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
     margin: 0 !important;
+    z-index: 2147483647 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: var(--carousel-size) !important;
+    height: var(--carousel-size) !important;
+    border-radius: 50% !important;
+    background-color: #ffffff !important;
+    border: 2px solid #f1cdb3 !important;
+    pointer-events: auto !important;
     visibility: visible !important;
     opacity: 1 !important;
-    z-index: 9999 !important;
-    pointer-events: auto !important;
 }
 
-/* Prev on the LEFT (standard) */
+/* Prev on the LEFT edge */
 .carousel-control-prev {
-    left: calc(var(--carousel-gap) + var(--carousel-size)) !important;
+    left: var(--carousel-gap) !important;
     right: auto !important;
 }
 
-/* Next on the RIGHT (standard) */
+/* Next on the RIGHT edge */
 .carousel-control-next {
-    right: calc(var(--carousel-gap) + var(--carousel-size)) !important;
+    right: var(--carousel-gap) !important;
     left: auto !important;
 }
 
-/* Keep controls centered vertically */
-.carousel-control-prev,
-.carousel-control-next {
-    top: 50% !important;
-    transform: translateY(-50%) !important;
+/* SVG icons scale with controls */
+.carousel-control-prev svg,
+.carousel-control-next svg {
+    width: calc(var(--carousel-size) * 0.5) !important;
+    height: calc(var(--carousel-size) * 0.5) !important;
+    color: #000000 !important;
+}
+
+/* Hover and focus states */
+.carousel-control-prev:hover,
+.carousel-control-next:hover,
+.carousel-control-prev:focus,
+.carousel-control-next:focus {
+    background-color: #f1cdb3 !important;
+    box-shadow: none !important;
 }
 
 /* Responsive sizes via variables */
@@ -805,11 +825,4 @@ body {
         --carousel-size: 50px;
         --carousel-gap: 12px;
     }
-}
-
-/* Ensure SVG icons scale well */
-.carousel-control-prev svg,
-.carousel-control-next svg {
-    width: calc(var(--carousel-size) * 0.6) !important;
-    height: calc(var(--carousel-size) * 0.6) !important;
 }
