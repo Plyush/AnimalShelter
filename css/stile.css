@@ -2,21 +2,28 @@
 
 .menu-bar {
     width: 100%;
-    height: 925px;
+    min-height: 300px;
     background-image: url(../img/Background.png);
     background-size: cover;
     background-position: center;
-    padding: 60px 0;
+    background-attachment: fixed;
+    padding: 0;
     color: #cdcdcd;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+d;
 }
 
 .menu-bar-pets {
     width: 100%;
-    height: 120px;
+    min-height: 80px;
     text-emphasis-color: #545454;
     background-size: cover;
     background-position: center;
-    padding: 60px;
+    padding: 20px 0;
     color: #cdcdcd;
 }
 
@@ -146,13 +153,13 @@ li {
 }
 
 .menu__item {
-    margin-left: 37px;
+    margin-left: 0;
+    font-size: clamp(12px, 2.5vw, 15px);
 }
 
 .menu__item a {
     text-decoration: none;
     font-family: 'Arial';
-    font-size: 15px;
     color: #cdcdcd;
 }
 
@@ -168,13 +175,13 @@ li {
 }
 
 .menu__item-Pets {
-    margin-left: 37px;
+    margin-left: 0;
+    font-size: clamp(12px, 2.5vw, 15px);
 }
 
 .menu__item-Pets a {
     text-decoration: none;
     font-family: 'Arial';
-    font-size: 15px;
     color: #545454;
 }
 
@@ -286,11 +293,12 @@ li {
 
 .FooterBar {
     width: 100%;
-    height: 362px;
+    min-height: auto;
     background-image: url(../img/FooterBackground.png);
     background-size: cover;
     background-position: center;
     color: #cdcdcd;
+    padding: 20px 0;
 }
 
 .TextTitelFooter {
@@ -338,8 +346,108 @@ li {
 /* Мобильные устройства (до 576px) */
 @media (max-width: 575.98px) {
     .TextTitel {
-        font-size: 24px;
-        line-height: 30px;
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    .Text {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .Titel {
+        font-size: 22px;
+    }
+
+    .TitelDescription {
+        font-size: 11px;
+        line-height: 16px;
+    }
+
+    .Button,
+    .ButtonPay,
+    .ButtonSlider {
+        padding: 10px 15px;
+        margin-top: 15px;
+        font-size: 13px;
+        border-radius: 20px;
+    }
+
+    .IconName {
+        font-size: 14px;
+        margin-top: 8px;
+    }
+
+    .card-title {
+        font-size: 14px;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 40px;
+        height: 40px;
+        margin-left: -20px;
+        margin-right: -20px;
+        border-width: 1.5px;
+    }
+
+    .carousel-control-prev svg,
+    .carousel-control-next svg {
+        width: 25px;
+        height: 25px;
+    }
+
+    .carousel-control-prev:hover,
+    .carousel-control-next:hover,
+    .carousel-control-prev:active,
+    .carousel-control-next:active,
+    .carousel-control-prev:focus,
+    .carousel-control-next:focus {
+        width: 40px;
+        height: 40px;
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+
+    .carousel-inner {
+        padding: 0.25em;
+    }
+
+    .card {
+        margin: 0 0.15em;
+    }
+
+    .card .img-wrapper {
+        height: 10em;
+    }
+
+    .btn-close {
+        width: 35px;
+        height: 35px;
+        top: -35px;
+        right: -35px;
+    }
+
+    .btn-close img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .TextTitelFooter {
+        font-size: 18px;
+        line-height: 1.2;
+    }
+
+    .Сontacts {
+        font-size: 13px;
+    }
+}
+
+/* Планшеты (576px до 991px) */
+@media (min-width: 576px) and (max-width: 991.98px) {
+    .TextTitel {
+        font-size: 26px;
+        line-height: 32px;
     }
 
     .Text {
@@ -348,24 +456,24 @@ li {
     }
 
     .Titel {
-        font-size: 28px;
+        font-size: 32px;
     }
 
     .TitelDescription {
         font-size: 12px;
+        line-height: 18px;
     }
 
     .Button,
     .ButtonPay,
     .ButtonSlider {
-        padding: 12px;
+        padding: 12px 18px;
         margin-top: 20px;
-        font-size: 15px;
+        font-size: 14px;
     }
 
     .IconName {
         font-size: 16px;
-        margin-top: 10px;
     }
 
     .card-title {
@@ -374,10 +482,16 @@ li {
 
     .carousel-control-prev,
     .carousel-control-next {
-        width: 5vh;
-        height: 5vh;
-        margin-left: -40px;
-        margin-right: -40px;
+        width: 50px;
+        height: 50px;
+        margin-left: -50px;
+        margin-right: -50px;
+    }
+
+    .carousel-control-prev svg,
+    .carousel-control-next svg {
+        width: 30px;
+        height: 30px;
     }
 
     .carousel-control-prev:hover,
@@ -386,10 +500,10 @@ li {
     .carousel-control-next:active,
     .carousel-control-prev:focus,
     .carousel-control-next:focus {
-        width: 5vh;
-        height: 5vh;
-        margin-left: -40px;
-        margin-right: -40px;
+        width: 50px;
+        height: 50px;
+        margin-left: -50px;
+        margin-right: -50px;
     }
 
     .carousel-inner {
@@ -397,99 +511,20 @@ li {
     }
 
     .card {
-        margin: 0 0.25em;
+        margin: 0 0.3em;
     }
 
-    .btn-close {
-        width: 50px;
-        height: 50px;
-        top: -50px;
-        right: -50px;
+    .card .img-wrapper {
+        height: 12em;
     }
 
-    .menu-bar {
-        height: auto;
-        padding: 30px 15px;
+    .TextTitelFooter {
+        font-size: 24px;
+        line-height: 1.2;
     }
 
-    .menu-bar-pets {
-        height: auto;
-        padding: 30px 15px;
-    }
-}
-
-/* Планшеты (576px до 991px) */
-@media (min-width: 576px) and (max-width: 991.98px) {
-    .TextTitel {
-        font-size: 28px;
-        line-height: 35px;
-    }
-
-    .Text {
+    .Сontacts {
         font-size: 14px;
-        line-height: 22px;
-    }
-
-    .Titel {
-        font-size: 36px;
-    }
-
-    .TitelDescription {
-        font-size: 13px;
-    }
-
-    .Button,
-    .ButtonPay,
-    .ButtonSlider {
-        padding: 14px;
-        margin-top: 30px;
-        font-size: 16px;
-    }
-
-    .IconName {
-        font-size: 18px;
-    }
-
-    .card-title {
-        font-size: 18px;
-    }
-
-    .carousel-control-prev,
-    .carousel-control-next {
-        width: 5.5vh;
-        height: 5.5vh;
-        margin-left: -70px;
-        margin-right: -70px;
-    }
-
-    .carousel-control-prev:hover,
-    .carousel-control-next:hover,
-    .carousel-control-prev:active,
-    .carousel-control-next:active,
-    .carousel-control-prev:focus,
-    .carousel-control-next:focus {
-        width: 5.5vh;
-        height: 5.5vh;
-        margin-left: -70px;
-        margin-right: -70px;
-    }
-
-    .carousel-inner {
-        padding: 0.75em;
-    }
-
-    .card {
-        margin: 0 0.35em;
-    }
-
-    .menu-bar {
-        height: auto;
-        padding: 40px 20px;
-    }
-
-    .menu-bar-pets {
-        height: auto;
-        padding: 40px 20px;
     }
 }
 
@@ -501,6 +536,14 @@ li {
 
     .card {
         margin: 0 0.5em;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 6vh;
+        height: 6vh;
+        margin-left: -100px;
+        margin-right: -100px;
     }
 }
 
@@ -521,5 +564,33 @@ li {
     .container-fluid {
         padding-left: 30px;
         padding-right: 30px;
+    }
+}
+
+/* Скрытие горизонтального скролла на мобильных */
+html,
+body {
+    overflow-x: hidden;
+}
+
+/* Улучшенный размер кнопок на мобильных */
+.Button {
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+/* Адаптивный modal */
+.modal-dialog {
+    margin: 0.5rem;
+}
+
+@media (max-width: 575.98px) {
+    .modal-dialog {
+        max-width: 90vw;
+    }
+
+    .btn-close img {
+        width: 20px;
+        height: 20px;
     }
 }
