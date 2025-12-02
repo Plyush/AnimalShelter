@@ -413,6 +413,12 @@ opacity: 1 !important;
         margin-top: 15px;
         font-size: 13px;
         border-radius: 20px;
+        transition: none;
+    }
+
+    /* Avoid hover effects on mobile that cause layout shifts */
+    .ButtonSlider:active {
+        box-shadow: 0 0 40px 40px #f1cdb3 inset, 0 0 0 0 #f1cdb3;
     }
 
     .IconName {
@@ -424,32 +430,7 @@ opacity: 1 !important;
         font-size: 14px;
     }
 
-    .carousel-control-prev,
-    .carousel-control-next {
-        width: 40px;
-        height: 40px;
-        margin-left: -20px;
-        margin-right: -20px;
-        border-width: 1.5px;
-    }
-
-    .carousel-control-prev svg,
-    .carousel-control-next svg {
-        width: 25px;
-        height: 25px;
-    }
-
-    .carousel-control-prev:hover,
-    .carousel-control-next:hover,
-    .carousel-control-prev:active,
-    .carousel-control-next:active,
-    .carousel-control-prev:focus,
-    .carousel-control-next:focus {
-        width: 40px;
-        height: 40px;
-        margin-left: -20px;
-        margin-right: -20px;
-    }
+    /* Carousel arrows on mobile: use CSS variables for consistent sizing (defined below) */
 
     .carousel-inner {
         padding: 0.25em;
@@ -850,7 +831,14 @@ body {
 @media (min-width: 576px) and (max-width: 991.98px) {
     :root {
         --carousel-size: 50px;
-        --carousel-gap: 2px;
+        --carousel-gap: 6px;
+    }
+}
+
+@media (min-width: 992px) {
+    :root {
+        --carousel-size: 6vh;
+        --carousel-gap: 5px;
     }
 }
 
@@ -871,12 +859,27 @@ body {
 
 .modal-content {
     position: relative !important;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Allow modal body to scroll if content is tall (e.g., landscape orientation) */
+.modal-body {
+    overflow-y: auto;
+    flex: 1 1 auto;
 }
 
 /* Ensure close button stays inside header without shifting layout */
 .modal .modal-header {
     position: relative !important;
     padding-right: 3rem !important;
+    flex-shrink: 0;
+}
+
+/* Ensure footer doesn't shrink */
+.modal-footer {
+    flex-shrink: 0;
 }
 
 /* Prevent carousel controls from changing size/margins on hover/active/focus to avoid layout jumps */
