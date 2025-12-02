@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/icon.ico" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/stile.css" />
+    <title>Contacts - Animal Shelter</title>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <div class="container-fluid px-2 px-sm-3 px-md-4">
+        <div class="row justify-content-center align-items-center" style="min-height: 200px; text-align: center; padding: 40px 15px;">
+            <div class="col-12">
+                <h1 class="TextTitel" style="font-size: clamp(28px, 6vw, 44px);">Contact Us</h1>
+                <p class="Text" style="font-size: clamp(13px, 2.5vw, 15px);">Get in touch with us for questions, suggestions, or to visit our facility</p>
+            </div>
+        </div>
+
+        <div class="row g-4 pb-5">
+            <!-- Boston Location -->
+            <div class="col-12 col-md-6 col-lg-5">
+                <div class="card h-100" style="background-color: #fafafa; border: none; padding: 25px;">
+                    <h4 class="card-title" style="margin-bottom: 20px; font-size: clamp(18px, 4vw, 24px);">Boston Location</h4>
+                    
+                    <div style="margin-bottom: 20px;">
+                        <h5 style="color: #f1cdb3; margin-bottom: 10px;">Address</h5>
+                        <p class="Text" style="font-size: 13px; margin: 0;">
+                            Central Street, 1st<br/>
+                            Boston, MA 02101<br/>
+                            (Entrance from the store)
+                        </p>
+                    </div>
+
+                    <div style="margin-bottom: 20px;">
+                        <h5 style="color: #f1cdb3; margin-bottom: 10px;">Phone</h5>
+                        <p class="Text" style="font-size: 13px; margin: 0;">
+                            <a href="tel:+16175551234" style="color: #545454; text-decoration: none;">+1 (617) 555-1234</a>
+                        </p>
+                    </div>
+
+                    <div style="margin-bottom: 20px;">
+                        <h5 style="color: #f1cdb3; margin-bottom: 10px;">Email</h5>
+                        <p class="Text" style="font-size: 13px; margin: 0;">
+                            <a href="mailto:boston@cozyhouse.com" style="color: #545454; text-decoration: none;">boston@cozyhouse.com</a>
+                        </p>
+                    </div>
+
+                    <div>
+                        <h5 style="color: #f1cdb3; margin-bottom: 10px;">Hours</h5>
+                        <p class="Text" style="font-size: 13px; margin: 0;">
+                            Monday - Friday: 9:00 AM - 6:00 PM<br/>
+                            Saturday: 10:00 AM - 5:00 PM<br/>
+                            Sunday: Closed
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- London Location -->
+            <div class="col-12 col-md-6 col-lg-5">
+                <div class="card h-100" style="background-color: #fafafa; border: none; padding: 25px;">
+                    <h4 class="card-title" style="margin-bottom: 20px; font-size: clamp(18px, 4vw, 24px);">London Location</h4>
+                    
+                    <div style="margin-bottom: 20px;">
+                        <h5 style="color: #f1cdb3; margin-bottom: 10px;">Address</h5>
+                        <p class="Text" style="font-size: 13px; margin: 0;">
+                            South Park, 18th<br/>
+                            London, England<br/>
+                            SW1A 1AA
+                        </p>
+                    </div>
+
+                    <div style="margin-bottom: 20px;">
+                        <h5 style="color: #f1cdb3; margin-bottom: 10px;">Phone</h5>
+                        <p class="Text" style="font-size: 13px; margin: 0;">
+                            <a href="tel:+442071838750" style="color: #545454; text-decoration: none;">+44 (20) 7183-8750</a>
+                        </p>
+                    </div>
+
+                    <div style="margin-bottom: 20px;">
+                        <h5 style="color: #f1cdb3; margin-bottom: 10px;">Email</h5>
+                        <p class="Text" style="font-size: 13px; margin: 0;">
+                            <a href="mailto:london@cozyhouse.com" style="color: #545454; text-decoration: none;">london@cozyhouse.com</a>
+                        </p>
+                    </div>
+
+                    <div>
+                        <h5 style="color: #f1cdb3; margin-bottom: 10px;">Hours</h5>
+                        <p class="Text" style="font-size: 13px; margin: 0;">
+                            Monday - Friday: 10:00 AM - 7:00 PM<br/>
+                            Saturday: 11:00 AM - 6:00 PM<br/>
+                            Sunday: Closed
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="row justify-content-center pb-5" style="padding: 40px 15px;">
+            <div class="col-12 col-lg-6">
+                <h3 class="TextTitel" style="font-size: clamp(24px, 5vw, 35px); text-align: center; margin-bottom: 30px;">Send us a Message</h3>
+                <form style="background-color: #fafafa; padding: 30px; border-radius: 10px;">
+                    <div class="mb-3">
+                        <label for="name" class="form-label Text" style="font-weight: bold;">Name</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label Text" style="font-weight: bold;">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="subject" class="form-label Text" style="font-weight: bold;">Subject</label>
+                        <input type="text" class="form-control" id="subject" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label Text" style="font-weight: bold;">Message</label>
+                        <textarea class="form-control" id="message" rows="5" required></textarea>
+                    </div>
+                    <div style="text-align: center;">
+                        <button type="submit" class="Button">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function includeHTML(filePath, elementId) {
+            fetch(filePath)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById(elementId).innerHTML = data;
+                })
+                .catch(error => console.error('Error loading HTML:', error));
+        }
+        includeHTML('header.html', 'header-placeholder');
+        includeHTML('footer.html', 'footer-placeholder');
+    </script>
+</body>
+</html>
