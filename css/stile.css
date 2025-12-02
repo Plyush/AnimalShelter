@@ -855,8 +855,8 @@ body {
 }
 
 /* === Fixes: modal centering and prevent arrow jumps === */
-/* Force modal to be centered horizontally and vertically regardless of other overrides */
-.modal {
+/* Apply centering only when modal is visible (has .show). This avoids blocking the page when modal is hidden. */
+.modal.show {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
