@@ -332,3 +332,194 @@ li {
     background-color: rgba(0, 0, 0, 0);
     /* Полностью прозрачный фон */
 }
+
+/* ============= АДАПТИВНЫЕ СТИЛИ ДЛЯ МОБИЛЬНЫХ И ПЛАНШЕТОВ ============= */
+
+/* Мобильные устройства (до 576px) */
+@media (max-width: 575.98px) {
+    .TextTitel {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .Text {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    .Titel {
+        font-size: 28px;
+    }
+
+    .TitelDescription {
+        font-size: 12px;
+    }
+
+    .Button,
+    .ButtonPay,
+    .ButtonSlider {
+        padding: 12px;
+        margin-top: 20px;
+        font-size: 15px;
+    }
+
+    .IconName {
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    .card-title {
+        font-size: 16px;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 5vh;
+        height: 5vh;
+        margin-left: -40px;
+        margin-right: -40px;
+    }
+
+    .carousel-control-prev:hover,
+    .carousel-control-next:hover,
+    .carousel-control-prev:active,
+    .carousel-control-next:active,
+    .carousel-control-prev:focus,
+    .carousel-control-next:focus {
+        width: 5vh;
+        height: 5vh;
+        margin-left: -40px;
+        margin-right: -40px;
+    }
+
+    .carousel-inner {
+        padding: 0.5em;
+    }
+
+    .card {
+        margin: 0 0.25em;
+    }
+
+    .btn-close {
+        width: 50px;
+        height: 50px;
+        top: -50px;
+        right: -50px;
+    }
+
+    .menu-bar {
+        height: auto;
+        padding: 30px 15px;
+    }
+
+    .menu-bar-pets {
+        height: auto;
+        padding: 30px 15px;
+    }
+}
+
+/* Планшеты (576px до 991px) */
+@media (min-width: 576px) and (max-width: 991.98px) {
+    .TextTitel {
+        font-size: 28px;
+        line-height: 35px;
+    }
+
+    .Text {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .Titel {
+        font-size: 36px;
+    }
+
+    .TitelDescription {
+        font-size: 13px;
+    }
+
+    .Button,
+    .ButtonPay,
+    .ButtonSlider {
+        padding: 14px;
+        margin-top: 30px;
+        font-size: 16px;
+    }
+
+    .IconName {
+        font-size: 18px;
+    }
+
+    .card-title {
+        font-size: 18px;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 5.5vh;
+        height: 5.5vh;
+        margin-left: -70px;
+        margin-right: -70px;
+    }
+
+    .carousel-control-prev:hover,
+    .carousel-control-next:hover,
+    .carousel-control-prev:active,
+    .carousel-control-next:active,
+    .carousel-control-prev:focus,
+    .carousel-control-next:focus {
+        width: 5.5vh;
+        height: 5.5vh;
+        margin-left: -70px;
+        margin-right: -70px;
+    }
+
+    .carousel-inner {
+        padding: 0.75em;
+    }
+
+    .card {
+        margin: 0 0.35em;
+    }
+
+    .menu-bar {
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    .menu-bar-pets {
+        height: auto;
+        padding: 40px 20px;
+    }
+}
+
+/* Средние экраны и выше (992px+) */
+@media (min-width: 992px) {
+    .carousel-inner {
+        padding: 1em;
+    }
+
+    .card {
+        margin: 0 0.5em;
+    }
+}
+
+/* Адаптивные контейнеры */
+.container-fluid {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+@media (min-width: 576px) {
+    .container-fluid {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container-fluid {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
