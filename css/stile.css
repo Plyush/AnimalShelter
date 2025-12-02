@@ -726,3 +726,27 @@ body {
         height: 20px;
     }
 }
+
+/* Strong overrides to ensure controls are visible and not offset by earlier rules */
+.carousel-control-prev,
+.carousel-control-next {
+    margin: 0 !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.carousel-control-prev {
+    left: calc(10px + var(--carousel-size)) !important;
+}
+
+.carousel-control-next {
+    right: calc(10px + var(--carousel-size)) !important;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover,
+.carousel-control-prev:focus,
+.carousel-control-next:focus {
+    box-shadow: none !important;
+    outline: none !important;
+}
