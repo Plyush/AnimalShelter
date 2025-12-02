@@ -762,14 +762,19 @@ body {
     }
 }
 
-/* Place carousel controls at the very edges of the viewport (fixed) */
+/* Carousel container positioning context */
+.carousel {
+    position: relative !important;
+}
+
+/* Place carousel controls at the edges of the carousel (absolute, bound to carousel) */
 .carousel-control-prev,
 .carousel-control-next {
-    position: fixed !important;
+    position: absolute !important;
     top: 50% !important;
     transform: translateY(-50%) !important;
     margin: 0 !important;
-    z-index: 2147483647 !important;
+    z-index: 999 !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -783,13 +788,13 @@ body {
     opacity: 1 !important;
 }
 
-/* Prev on the LEFT edge */
+/* Prev on the LEFT edge of carousel */
 .carousel-control-prev {
     left: var(--carousel-gap) !important;
     right: auto !important;
 }
 
-/* Next on the RIGHT edge */
+/* Next on the RIGHT edge of carousel */
 .carousel-control-next {
     right: var(--carousel-gap) !important;
     left: auto !important;
