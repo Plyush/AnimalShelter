@@ -359,15 +359,16 @@ opacity: 1 !important;
 
 }
 
+/* Restore sensible close button positioning inside modals (override previous accidental rules) */
 .btn-close {
-    width: 100px;
-    height: 100px;
-    display: block;
-    float: right;
-    position: relative;
-    top: -100px;
-    right: -100px;
-    z-index: 99999;
+    width: auto;
+    height: auto;
+    display: inline-block;
+    float: none;
+    position: static;
+    top: auto;
+    right: auto;
+    z-index: auto;
 }
 
 
@@ -749,6 +750,26 @@ body {
 /* Адаптивный modal */
 .modal-dialog {
     margin: 0.5rem;
+}
+
+/* Modal image inside pet detail */
+#petImageDetail {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: contain;
+}
+
+/* Ensure the modal header close button stays in the header area */
+.modal .btn-close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    opacity: 0.8;
 }
 
 @media (max-width: 575.98px) {

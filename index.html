@@ -271,9 +271,18 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
-                    <p><strong>Type:</strong> <span id="petTypeDetail"></span></p>
-                    <p><strong>Age:</strong> <span id="petAgeDetail"></span></p>
-                    <p id="petDescriptionDetail"></p>
+                    <div class="container-fluid">
+                      <div class="row">
+                        <div class="col-12 col-md-4 text-center mb-3 mb-md-0">
+                          <img id="petImageDetail" src="" alt="Pet image" class="img-fluid rounded" />
+                        </div>
+                        <div class="col-12 col-md-8">
+                          <p><strong>Type:</strong> <span id="petTypeDetail"></span></p>
+                          <p><strong>Age:</strong> <span id="petAgeDetail"></span></p>
+                          <p id="petDescriptionDetail"></p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -408,10 +417,39 @@
                 var petAge = button.getAttribute('data-age');
                 var petDesc = button.getAttribute('data-desc');
 
-                document.getElementById('petNameDetail').textContent = petName;
-                document.getElementById('petTypeDetail').textContent = petType;
-                document.getElementById('petAgeDetail').textContent = petAge;
-                document.getElementById('petDescriptionDetail').textContent = petDesc;
+            document.getElementById('petNameDetail').textContent = petName;
+            document.getElementById('petTypeDetail').textContent = petType;
+            document.getElementById('petAgeDetail').textContent = petAge;
+            document.getElementById('petDescriptionDetail').textContent = petDesc;
+
+            // Try to get image src from the related card (closest .card img)
+            var imgSrc = '';
+            var imgAlt = petName || '';
+            try {
+              var card = button.closest('.card');
+              if (card) {
+                var imgEl = card.querySelector('.img-wrapper img');
+                if (imgEl) {
+                  imgSrc = imgEl.getAttribute('src') || '';
+                  imgAlt = imgEl.getAttribute('alt') || imgAlt;
+                }
+              }
+            } catch (e) {
+              // ignore
+            }
+
+            var modalImg = document.getElementById('petImageDetail');
+            if (modalImg) {
+              if (imgSrc) {
+                modalImg.src = imgSrc;
+                modalImg.alt = imgAlt;
+                modalImg.style.display = '';
+              } else {
+                modalImg.src = '';
+                modalImg.alt = '';
+                modalImg.style.display = 'none';
+              }
+            }
             });
         }
     </script>
