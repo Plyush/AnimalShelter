@@ -721,6 +721,7 @@ opacity: 1 !important;
 html,
 body {
     overflow-x: hidden;
+    scrollbar-gutter: stable;
 }
 
 /* Улучшенный размер кнопок на мобильных */
@@ -896,18 +897,6 @@ body {
     height: var(--carousel-size) !important;
     border-radius: 50% !important;
     transition: background-color 140ms ease !important;
-}
-
-/* On small screens keep controls compact and avoid overlapping card tap areas */
-@media (max-width: 767.98px) {
-
-    .carousel-control-prev,
-    .carousel-control-next {
-        left: 6px !important;
-        right: 6px !important;
-        width: 44px !important;
-        height: 44px !important;
-    }
 }
 
 /* If anything still overlaps interactive elements, reduce z-index of controls slightly */
