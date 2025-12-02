@@ -1,43 +1,35 @@
 @import url(fonts.css);
 
+/* ===== CSS Custom Properties (Variables) ===== */
 :root {
     --carousel-size: 6vh;
-    /* default control diameter */
-    --carousel-gap: 2px;
-    /* base gap from edge */
+    --carousel-gap: 5px;
+    --primary-color: #f1cdb3;
+    --dark-text: #292929;
+    --light-text: #cdcdcd;
+    --section-text: #4c4c4c;
+    --section-title: #545454;
 }
 
-.menu-bar {
-    width: 100%;
-    min-height: 300px;
-    background-image: url(../img/Background.png);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+/* ===== Base Styles ===== */
+html,
+body {
+    overflow-x: hidden;
+    scrollbar-gutter: stable;
+}
+
+ul,
+li {
+    display: block;
     padding: 0;
-    color: #cdcdcd;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    margin: 0;
 }
 
-d;
-}
-
-.menu-bar-pets {
-    width: 100%;
-    min-height: 80px;
-    text-emphasis-color: #545454;
-    background-size: cover;
-    background-position: center;
-    padding: 20px 0;
-    color: #cdcdcd;
-}
-
+/* ===== Typography & Colors ===== */
 .Logo {
     font-family: 'Georgia';
     font-size: 32px;
-    color: #f1cdb3;
+    color: var(--primary-color);
 }
 
 .LogoDescription {
@@ -49,15 +41,14 @@ d;
 .Logo-Pets {
     font-family: 'Georgia';
     font-size: 32px;
-    color: #545454;
+    color: var(--section-title);
 }
 
 .LogoDescription-Pets {
     font-family: 'Arial';
     font-size: 13px;
-    color: #545454;
+    color: var(--section-title);
 }
-
 
 .Titel {
     font-family: 'Georgia';
@@ -68,97 +59,47 @@ d;
 .TitelDescription {
     font-family: 'Arial';
     font-size: 15px;
-    color: #cdcdcd;
-}
-
-.Button {
-    display: inline-block;
-    padding: 15px;
-    margin-top: 46px;
-    border-radius: 26px;
-    box-shadow: 0 0 40px 40px #f1cdb3 inset, 0 0 0 0 #f1cdb3;
-    font-family: 'Georgia';
-    font-size: 17px;
-    color: #292929;
-    text-decoration: none;
-}
-
-.ButtonPay {
-
-    display: inline-block;
-    padding: 15px;
-    border-radius: 26px;
-    box-shadow: 0 0 40px 40px #f1cdb3 inset, 0 0 0 0 #f1cdb3;
-    font-family: 'Georgia';
-    font-size: 17px;
-    color: #292929;
-    text-decoration: none;
-}
-
-.ButtonSlider {
-    border: 1px #f1cdb3 solid;
-    display: inline-block;
-    padding: 15px;
-    margin-top: 46px;
-    border-radius: 26px;
-    box-shadow: 0 0 40px 40px #ffffff inset, 0 0 0 0 #ffffff;
-    font-family: 'Georgia';
-    font-size: 17px;
-    color: #292929;
-    text-decoration: none;
-}
-
-.ButtonSlider:hover {
-
-    display: inline-block;
-    padding: 15px;
-    margin-top: 46px;
-    border-radius: 26px;
-    box-shadow: 0 0 40px 40px #f1cdb3 inset, 0 0 0 0 #f1cdb3;
-    font-family: 'Georgia';
-    font-size: 17px;
-    color: #292929;
-    text-decoration: none;
+    color: var(--light-text);
 }
 
 .TextTitel {
-
-    letter-spacing: 60;
-    line-height: 45px;
     font-family: 'Georgia';
     font-size: 35px;
-    color: #545454;
+    color: var(--section-title);
+    letter-spacing: 60;
+    line-height: 45px;
 }
 
-
-
 .Text {
-    letter-spacing: 0;
-    line-height: 24px;
     font-family: 'Arial';
     font-size: 15px;
-    color: #4c4c4c;
+    color: var(--section-text);
+    letter-spacing: 0;
+    line-height: 24px;
 }
 
 .IconName {
     font-family: 'Georgia';
     font-size: 20px;
-    color: #545454;
+    color: var(--section-title);
 }
 
-.card-title {
+.TextTitelFooter {
     font-family: 'Georgia';
+    font-size: 35px;
+    color: #ffffff;
+    letter-spacing: 60;
+    line-height: 45px;
+}
+
+.Сontacts {
+    font-family: 'Times New Roman';
     font-size: 20px;
-    color: #545454;
+    color: var(--primary-color);
+    text-decoration: none;
 }
 
-ul,
-li {
-    display: block;
-    padding: 0;
-    margin: 0;
-}
-
+/* ===== Navigation Menu ===== */
 .menu__item {
     margin-left: 0;
     font-size: clamp(12px, 2.5vw, 15px);
@@ -167,18 +108,16 @@ li {
 .menu__item a {
     text-decoration: none;
     font-family: 'Arial';
-    color: #cdcdcd;
+    color: var(--light-text);
+    transition: color 200ms ease;
 }
-
-
 
 .menu__item a:hover {
     color: #ffffff;
     text-decoration: underline;
     text-underline-offset: 6px;
     text-decoration-thickness: 3px;
-    text-decoration-color: #f1cdb3;
-
+    text-decoration-color: var(--primary-color);
 }
 
 .menu__item-Pets {
@@ -189,105 +128,137 @@ li {
 .menu__item-Pets a {
     text-decoration: none;
     font-family: 'Arial';
-    color: #545454;
+    color: var(--section-title);
+    transition: color 200ms ease;
 }
 
-
-
 .menu__item-Pets a:hover {
-    color: #545454;
+    color: var(--section-title);
     text-decoration: underline;
     text-underline-offset: 6px;
     text-decoration-thickness: 3px;
-    text-decoration-color: #f1cdb3;
-
+    text-decoration-color: var(--primary-color);
 }
 
-.carousel-inner {
-    padding: 1em;
+/* ===== Header & Footer ===== */
+.menu-bar {
+    width: 100%;
+    min-height: 300px;
+    background-image: url(../img/Background.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 0;
+    color: var(--light-text);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
+.menu-bar-pets {
+    width: 100%;
+    min-height: 80px;
+    background-size: cover;
+    background-position: center;
+    padding: 20px 0;
+    color: var(--light-text);
+}
+
+.FooterBar {
+    width: 100%;
+    min-height: auto;
+    background-image: url(../img/FooterBackground.png);
+    background-size: cover;
+    background-position: center;
+    color: var(--light-text);
+    padding: 20px 0;
+}
+
+/* ===== Buttons ===== */
+.Button {
+    display: inline-block;
+    padding: 15px;
+    margin-top: 46px;
+    border-radius: 26px;
+    box-shadow: 0 0 40px 40px var(--primary-color) inset, 0 0 0 0 var(--primary-color);
+    font-family: 'Georgia';
+    font-size: 17px;
+    color: var(--dark-text);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color 200ms ease;
+    cursor: pointer;
+}
+
+.ButtonPay {
+    display: inline-block;
+    padding: 15px;
+    border-radius: 26px;
+    box-shadow: 0 0 40px 40px var(--primary-color) inset, 0 0 0 0 var(--primary-color);
+    font-family: 'Georgia';
+    font-size: 17px;
+    color: var(--dark-text);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.ButtonSlider {
+    border: 1px var(--primary-color) solid;
+    display: inline-block;
+    padding: 15px;
+    margin-top: 46px;
+    border-radius: 26px;
+    box-shadow: 0 0 40px 40px #ffffff inset, 0 0 0 0 #ffffff;
+    font-family: 'Georgia';
+    font-size: 17px;
+    color: var(--dark-text);
+    text-decoration: none;
+    cursor: pointer;
+    transition: box-shadow 200ms ease;
+}
+
+.ButtonSlider:hover,
+.ButtonSlider:active {
+    box-shadow: 0 0 40px 40px var(--primary-color) inset, 0 0 0 0 var(--primary-color);
+}
+
+/* ===== Cards & Carousel ===== */
 .card {
     background-color: #fafafa;
     margin: 0 0.5em;
     border: none;
 }
 
-.carousel-control-prev,
-{
-margin-left: -100px;
-margin-right: -100px;
-border: 2px #f1cdb3 solid;
-background-color: #ffffff;
-width: 6vh;
-height: 6vh;
-border-radius: 50%;
-top: 50%;
-transform: translateY(-50%);
-visibility: visible !important;
-opacity: 1 !important;
+.card-title {
+    font-family: 'Georgia';
+    font-size: 20px;
+    color: var(--section-title);
 }
 
-.carousel-control-next {
-    margin-left: -100px;
-    margin-right: -100px;
-    border: 2px #f1cdb3 solid;
-    background-color: #ffffff;
-    width: 6vh;
-    height: 6vh;
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-    visibility: visible !important;
-    opacity: 1 !important;
+.card .img-wrapper {
+    max-width: 100%;
+    height: 13em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-    {
-    margin-left: -100px;
-    margin-right: -100px;
-    border: 2px #f1cdb3 solid;
-    background-color: #ffffff;
-    width: 6vh;
-    height: 6vh;
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-    visibility: visible !important;
-    opacity: 1 !important;
+.card img {
+    max-height: 100%;
+    max-width: 100%;
 }
 
-.carousel-control-prev:hover,
-.carousel-control-next:hover {
-    margin-left: -100px;
-    margin-right: -100px;
-    background-color: #f1cdb3;
-    width: 6vh;
-    height: 6vh;
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #000000 !important;
-    visibility: visible !important;
-    opacity: 1 !important;
+.pet-subtitle {
+    font-size: 12px;
+    margin-bottom: 10px;
 }
 
-.carousel-control-prev:active,
-.carousel-control-next:active,
-.carousel-control-prev:focus,
-.carousel-control-next:focus {
-    margin-left: -100px;
-    margin-right: -100px;
-    background-color: #f1cdb3;
-    width: 6vh;
-    height: 6vh;
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #000000 !important;
-    outline: none;
-    box-shadow: none;
-    visibility: visible !important;
-    opacity: 1 !important;
+.carousel {
+    position: relative !important;
+}
+
+.carousel-inner {
+    padding: 1em;
 }
 
 @media (min-width: 768px) {
@@ -302,172 +273,124 @@ opacity: 1 !important;
     }
 }
 
-.card .img-wrapper {
-    max-width: 100%;
-    height: 13em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* ===== Carousel Controls ===== */
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    margin: 0 !important;
+    z-index: 150 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: var(--carousel-size) !important;
+    height: var(--carousel-size) !important;
+    border-radius: 50% !important;
+    background-color: #ffffff !important;
+    border: 2px solid var(--primary-color) !important;
+    pointer-events: auto !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transition: background-color 140ms ease !important;
 }
 
-.card img {
-
-    max-height: 100%;
-}
-
-@media (max-width: 767px) {
-    .card .img-wrapper {
-
-        height: 17em;
-    }
-}
-
-.carousel-control-next,
 .carousel-control-prev {
-    color: #000000;
+    left: var(--carousel-gap) !important;
+    right: auto !important;
 }
 
+.carousel-control-next {
+    right: var(--carousel-gap) !important;
+    left: auto !important;
+}
+
+.carousel-control-prev svg,
+.carousel-control-next svg {
+    width: calc(var(--carousel-size) * 0.5) !important;
+    height: calc(var(--carousel-size) * 0.5) !important;
+    color: var(--dark-text) !important;
+}
+
+.carousel-control-prev:hover,
 .carousel-control-next:hover,
-.carousel-control-prev:hover {
-    color: #000000;
+.carousel-control-prev:focus,
+.carousel-control-next:focus {
+    background-color: var(--primary-color) !important;
 }
 
-.FooterBar {
-    width: 100%;
-    min-height: auto;
-    background-image: url(../img/FooterBackground.png);
-    background-size: cover;
-    background-position: center;
-    color: #cdcdcd;
-    padding: 20px 0;
+/* ===== Modal ===== */
+.modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
-.TextTitelFooter {
-
-    letter-spacing: 60;
-    line-height: 45px;
-    font-family: 'Georgia';
-    font-size: 35px;
-    color: #ffffff;
+.modal.show {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0.5rem !important;
 }
-
-.Сontacts {
-    font-family: 'Times New Roman';
-    font-size: 20px;
-    color: #f1cdb3;
-    text-decoration: none;
-
-}
-
-/* Restore sensible close button positioning inside modals (override previous accidental rules) */
-.btn-close {
-    width: auto;
-    height: auto;
-    display: inline-block;
-    float: none;
-    position: static;
-    top: auto;
-    right: auto;
-    z-index: auto;
-}
-
-
 
 .modal-dialog {
-
-    background-color: rgba(255, 255, 255, 0) !important;
+    margin: 0 !important;
+    max-width: 820px !important;
+    width: 100% !important;
 }
 
-.modal-backdrop {
-    background-color: rgba(0, 0, 0, 0);
-    /* Полностью прозрачный фон */
+.modal-content {
+    position: relative !important;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
 }
 
-/* ============= АДАПТИВНЫЕ СТИЛИ ДЛЯ МОБИЛЬНЫХ И ПЛАНШЕТОВ ============= */
-
-/* Мобильные устройства (до 576px) */
-@media (max-width: 575.98px) {
-    .TextTitel {
-        font-size: 20px;
-        line-height: 25px;
-    }
-
-    .Text {
-        font-size: 12px;
-        line-height: 18px;
-    }
-
-    .Titel {
-        font-size: 22px;
-    }
-
-    .TitelDescription {
-        font-size: 11px;
-        line-height: 16px;
-    }
-
-    .Button,
-    .ButtonPay,
-    .ButtonSlider {
-        padding: 10px 15px;
-        margin-top: 15px;
-        font-size: 13px;
-        border-radius: 20px;
-        transition: none;
-    }
-
-    /* Avoid hover effects on mobile that cause layout shifts */
-    .ButtonSlider:active {
-        box-shadow: 0 0 40px 40px #f1cdb3 inset, 0 0 0 0 #f1cdb3;
-    }
-
-    .IconName {
-        font-size: 14px;
-        margin-top: 8px;
-    }
-
-    .card-title {
-        font-size: 14px;
-    }
-
-    /* Carousel arrows on mobile: use CSS variables for consistent sizing (defined below) */
-
-    .carousel-inner {
-        padding: 0.25em;
-    }
-
-    .card {
-        margin: 0 0.15em;
-    }
-
-    .card .img-wrapper {
-        height: 10em;
-    }
-
-    .btn-close {
-        width: 35px;
-        height: 35px;
-        position: absolute;
-        top: 0.5rem;
-        right: 0.5rem;
-    }
-
-    .btn-close img {
-        max-width: 100%;
-        height: auto;
-    }
-
-    .TextTitelFooter {
-        font-size: 18px;
-        line-height: 1.2;
-    }
-
-    .Сontacts {
-        font-size: 13px;
-    }
+.modal-header {
+    position: relative !important;
+    padding-right: 3rem !important;
+    flex-shrink: 0;
 }
 
-/* ===== Styles moved from inline attributes in index.html ===== */
+.modal-body {
+    overflow-y: auto;
+    flex: 1 1 auto;
+    padding: 1.5rem;
+}
+
+.modal-footer {
+    flex-shrink: 0;
+}
+
+.btn-close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    opacity: 0.8;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--dark-text);
+    cursor: pointer;
+}
+
+.btn-close:hover {
+    opacity: 1;
+}
+
+#petImageDetail {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+/* ===== Layout Sections ===== */
 .hero-section {
     min-height: 586px;
     padding: 30px 15px;
@@ -483,11 +406,6 @@ opacity: 1 !important;
     min-height: 230px;
     text-align: center;
     padding: 20px 10px;
-}
-
-.pet-subtitle {
-    font-size: 12px;
-    margin-bottom: 10px;
 }
 
 .cta-section {
@@ -525,6 +443,8 @@ opacity: 1 !important;
     font-family: 'Times New Roman';
     font-size: 20px;
     display: inline-block;
+    color: var(--primary-color);
+    text-decoration: none;
 }
 
 .legal-info {
@@ -536,73 +456,98 @@ opacity: 1 !important;
     margin-top: 35px;
 }
 
-/* Ensure carousel controls are visible on desktop and above the content */
-.carousel {
-    position: relative;
+/* ===== Containers ===== */
+.container-fluid {
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-.carousel-control-prev,
-.carousel-control-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    margin: 0;
-    z-index: 60;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px #f1cdb3 solid;
-    background-color: #ffffff;
-    width: 6vh;
-    height: 6vh;
-    border-radius: 50%;
-    visibility: visible !important;
-    opacity: 1 !important;
-}
+/* ===== Responsive Design ===== */
 
-.carousel-control-prev {
-    left: 10px;
-}
-
-.carousel-control-next {
-    right: 10px;
-}
-
-.carousel-control-prev svg,
-.carousel-control-next svg {
-    width: 32px;
-    height: 32px;
-}
-
+/* Mobile devices (up to 575.98px) */
 @media (max-width: 575.98px) {
-
-    .carousel-control-prev,
-    .carousel-control-next {
-        left: 8px;
-        right: 8px;
-        width: 40px;
-        height: 40px;
+    :root {
+        --carousel-size: 40px;
+        --carousel-gap: 2px;
     }
 
-    .carousel-control-prev svg,
-    .carousel-control-next svg {
-        width: 25px;
-        height: 25px;
+    .Titel {
+        font-size: 22px;
     }
-}
 
-/* End moved styles */
+    .TitelDescription {
+        font-size: 11px;
+        line-height: 16px;
+    }
 
-/* Планшеты (576px до 991px) */
-@media (min-width: 576px) and (max-width: 991.98px) {
     .TextTitel {
-        font-size: 26px;
-        line-height: 32px;
+        font-size: 20px;
+        line-height: 25px;
     }
 
     .Text {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .TextTitelFooter {
+        font-size: 18px;
+        line-height: 1.2;
+    }
+
+    .IconName {
+        font-size: 14px;
+        margin-top: 8px;
+    }
+
+    .card-title {
+        font-size: 14px;
+    }
+
+    .Сontacts {
         font-size: 13px;
-        line-height: 20px;
+    }
+
+    .Button,
+    .ButtonPay,
+    .ButtonSlider {
+        padding: 10px 15px;
+        margin-top: 15px;
+        font-size: 13px;
+        border-radius: 20px;
+    }
+
+    .card .img-wrapper {
+        height: 10em;
+    }
+
+    .carousel-inner {
+        padding: 0.25em;
+    }
+
+    .card {
+        margin: 0 0.15em;
+    }
+
+    .modal-dialog {
+        max-width: 95vw !important;
+    }
+
+    .modal-body {
+        padding: 1rem;
+    }
+}
+
+/* Tablets (576px to 991.98px) */
+@media (min-width: 576px) and (max-width: 991.98px) {
+    :root {
+        --carousel-size: 50px;
+        --carousel-gap: 6px;
+    }
+
+    .container-fluid {
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
     .Titel {
@@ -614,12 +559,19 @@ opacity: 1 !important;
         line-height: 18px;
     }
 
-    .Button,
-    .ButtonPay,
-    .ButtonSlider {
-        padding: 12px 18px;
-        margin-top: 20px;
-        font-size: 14px;
+    .TextTitel {
+        font-size: 26px;
+        line-height: 32px;
+    }
+
+    .Text {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    .TextTitelFooter {
+        font-size: 24px;
+        line-height: 1.2;
     }
 
     .IconName {
@@ -630,30 +582,20 @@ opacity: 1 !important;
         font-size: 16px;
     }
 
-    .carousel-control-prev,
-    .carousel-control-next {
-        width: 50px;
-        height: 50px;
-        margin-left: -50px;
-        margin-right: -50px;
+    .Сontacts {
+        font-size: 14px;
     }
 
-    .carousel-control-prev svg,
-    .carousel-control-next svg {
-        width: 30px;
-        height: 30px;
+    .Button,
+    .ButtonPay,
+    .ButtonSlider {
+        padding: 12px 18px;
+        margin-top: 20px;
+        font-size: 14px;
     }
 
-    .carousel-control-prev:hover,
-    .carousel-control-next:hover,
-    .carousel-control-prev:active,
-    .carousel-control-next:active,
-    .carousel-control-prev:focus,
-    .carousel-control-next:focus {
-        width: 50px;
-        height: 50px;
-        margin-left: -50px;
-        margin-right: -50px;
+    .card .img-wrapper {
+        height: 12em;
     }
 
     .carousel-inner {
@@ -664,22 +606,23 @@ opacity: 1 !important;
         margin: 0 0.3em;
     }
 
-    .card .img-wrapper {
-        height: 12em;
-    }
-
-    .TextTitelFooter {
-        font-size: 24px;
-        line-height: 1.2;
-    }
-
-    .Сontacts {
-        font-size: 14px;
+    .modal-dialog {
+        max-width: 90vw !important;
     }
 }
 
-/* Средние экраны и выше (992px+) */
+/* Desktop (992px and up) */
 @media (min-width: 992px) {
+    :root {
+        --carousel-size: 6vh;
+        --carousel-gap: 5px;
+    }
+
+    .container-fluid {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
     .carousel-inner {
         padding: 1em;
     }
@@ -688,226 +631,170 @@ opacity: 1 !important;
         margin: 0 0.5em;
     }
 
-    .carousel-control-prev,
-    .carousel-control-next {
-        width: 6vh;
-        height: 6vh;
-        margin-left: -100px;
-        margin-right: -100px;
+    .card .img-wrapper {
+        height: 13em;
     }
-}
 
-/* Адаптивные контейнеры */
-.container-fluid {
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-@media (min-width: 576px) {
-    .container-fluid {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-}
-
-@media (min-width: 992px) {
-    .container-fluid {
-        padding-left: 30px;
-        padding-right: 30px;
-    }
-}
-
-/* Скрытие горизонтального скролла на мобильных */
-html,
-body {
-    overflow-x: hidden;
-    scrollbar-gutter: stable;
-}
-
-/* Улучшенный размер кнопок на мобильных */
-.Button {
-    white-space: nowrap;
-    transition: all 0.3s ease;
-}
-
-/* Адаптивный modal */
-.modal-dialog {
-    margin: 0.5rem;
-}
-
-/* Modal image inside pet detail */
-#petImageDetail {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    object-fit: contain;
-}
-
-/* Ensure the modal header close button stays in the header area */
-.modal .btn-close {
-    position: absolute;
-    top: 0.5rem;
-    right: 0.5rem;
-    width: 1.5rem;
-    height: 1.5rem;
-    opacity: 0.8;
-}
-
-@media (max-width: 575.98px) {
     .modal-dialog {
-        max-width: 90vw;
-    }
-
-    .btn-close img {
-        width: 20px;
-        height: 20px;
+        max-width: 820px !important;
     }
 }
 
-/* Carousel container positioning context */
-.carousel {
-    position: relative !important;
+/* ===== Help Page & Additional Sections ===== */
+.help-header-section {
+    min-height: 200px;
+    text-align: center;
+    padding: 40px 15px;
 }
 
-/* Place carousel controls at the edges of the carousel (absolute, bound to carousel) */
-.carousel-control-prev,
-.carousel-control-next {
-    position: absolute !important;
-    top: 50% !important;
-    transform: translateY(-50%) !important;
-    margin: 0 !important;
-    z-index: 999 !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    width: var(--carousel-size) !important;
-    height: var(--carousel-size) !important;
-    border-radius: 50% !important;
-    background-color: #ffffff !important;
-    border: 2px solid #f1cdb3 !important;
-    pointer-events: auto !important;
-    visibility: visible !important;
-    opacity: 1 !important;
+.help-header-title {
+    font-size: clamp(28px, 6vw, 44px);
+    margin-bottom: 15px;
 }
 
-/* Prev on the LEFT edge of carousel */
-.carousel-control-prev {
-    left: var(--carousel-gap) !important;
-    right: auto !important;
+.help-header-subtitle {
+    font-size: clamp(13px, 2.5vw, 15px);
 }
 
-/* Next on the RIGHT edge of carousel */
-.carousel-control-next {
-    right: var(--carousel-gap) !important;
-    left: auto !important;
+.help-card {
+    background-color: #fafafa;
+    border: none;
+    padding: 20px;
 }
 
-/* SVG icons scale with controls */
-.carousel-control-prev svg,
-.carousel-control-next svg {
-    width: calc(var(--carousel-size) * 0.5) !important;
-    height: calc(var(--carousel-size) * 0.5) !important;
-    color: #000000 !important;
+.help-card-icon {
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 15px;
 }
 
-/* Hover and focus states */
-.carousel-control-prev:hover,
-.carousel-control-next:hover,
-.carousel-control-prev:focus,
-.carousel-control-next:focus {
-    background-color: #f1cdb3 !important;
-    box-shadow: none !important;
+.help-card-title {
+    text-align: center;
 }
 
-/* Responsive sizes via variables */
-@media (max-width: 575.98px) {
-    :root {
-        --carousel-size: 40px;
-        --carousel-gap: 2px;
+.help-card-button {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.bank-info-section {
+    padding: 40px 15px;
+    text-align: center;
+}
+
+.bank-info-title {
+    font-size: clamp(24px, 5vw, 35px);
+    margin-bottom: 20px;
+}
+
+.bank-info-label {
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.bank-card {
+    background-color: #f9f9f9;
+    border: 2px solid var(--primary-color);
+    padding: 20px;
+}
+
+.bank-detail {
+    font-family: 'Times New Roman';
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.bank-detail:last-child {
+    margin-bottom: 0;
+}
+
+/* ===== Contacts Page Sections ===== */
+.contacts-header-section {
+    min-height: 200px;
+    text-align: center;
+    padding: 40px 15px;
+}
+
+.contacts-header-title {
+    font-size: clamp(28px, 6vw, 44px);
+}
+
+.contacts-header-subtitle {
+    font-size: clamp(13px, 2.5vw, 15px);
+}
+
+.contacts-card {
+    background-color: #fafafa;
+    border: none;
+    padding: 25px;
+}
+
+.contacts-card-title {
+    margin-bottom: 20px;
+    font-size: clamp(18px, 4vw, 24px);
+}
+
+.contacts-card-section {
+    margin-bottom: 20px;
+}
+
+.contacts-card-label {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.contacts-card-text {
+    font-size: 13px;
+    margin: 0;
+}
+
+.contacts-card-link {
+    color: var(--section-title);
+    text-decoration: none;
+}
+
+.contacts-card-link:hover {
+    text-decoration: underline;
+}
+
+.contacts-form-section {
+    padding: 40px 15px;
+}
+
+.contacts-form-title {
+    font-size: clamp(24px, 5vw, 35px);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contacts-form {
+    background-color: #fafafa;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.contacts-form-label {
+    font-weight: bold;
+}
+
+.contacts-form-button {
+    text-align: center;
+}
+
+/* ===== Landscape orientation adjustments */
+@media (max-height: 500px) {
+    .modal-content {
+        max-height: 95vh;
     }
-}
 
-@media (min-width: 576px) and (max-width: 991.98px) {
-    :root {
-        --carousel-size: 50px;
-        --carousel-gap: 6px;
+    .modal-body {
+        max-height: 70vh;
+        overflow-y: auto;
     }
-}
 
-@media (min-width: 992px) {
-    :root {
-        --carousel-size: 6vh;
-        --carousel-gap: 5px;
-    }
-}
-
-/* === Fixes: modal centering and prevent arrow jumps === */
-/* Apply centering only when modal is visible (has .show). This avoids blocking the page when modal is hidden. */
-.modal.show {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    padding: 0.5rem !important;
-}
-
-.modal-dialog {
-    margin: 0 !important;
-    max-width: 820px !important;
-    width: 100% !important;
-}
-
-.modal-content {
-    position: relative !important;
-    max-height: 90vh;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Allow modal body to scroll if content is tall (e.g., landscape orientation) */
-.modal-body {
-    overflow-y: auto;
-    flex: 1 1 auto;
-}
-
-/* Ensure close button stays inside header without shifting layout */
-.modal .modal-header {
-    position: relative !important;
-    padding-right: 3rem !important;
-    flex-shrink: 0;
-}
-
-/* Ensure footer doesn't shrink */
-.modal-footer {
-    flex-shrink: 0;
-}
-
-/* Prevent carousel controls from changing size/margins on hover/active/focus to avoid layout jumps */
-.carousel-control-prev,
-.carousel-control-next,
-.carousel-control-prev:hover,
-.carousel-control-next:hover,
-.carousel-control-prev:active,
-.carousel-control-next:active,
-.carousel-control-prev:focus,
-.carousel-control-next:focus {
-    margin: 0 !important;
-    width: var(--carousel-size) !important;
-    height: var(--carousel-size) !important;
-    border-radius: 50% !important;
-    transition: background-color 140ms ease !important;
-}
-
-/* If anything still overlaps interactive elements, reduce z-index of controls slightly */
-.carousel-control-prev,
-.carousel-control-next {
-    z-index: 150 !important;
-}
-
-/* On very small screens make modal dialog nearly full width for easy tapping */
-@media (max-width: 575.98px) {
-    .modal-dialog {
-        max-width: 95vw !important;
+    .carousel-section {
+        min-height: auto;
+        padding: 10px 10px;
     }
 }
