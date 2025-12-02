@@ -3,7 +3,7 @@
 :root {
     --carousel-size: 6vh;
     /* default control diameter */
-    --carousel-gap: 5px;
+    --carousel-gap: 10px;
     /* base gap from edge */
 }
 
@@ -816,13 +816,13 @@ body {
 @media (max-width: 575.98px) {
     :root {
         --carousel-size: 40px;
-        --carousel-gap: 4px;
+        --carousel-gap: 8px;
     }
 }
 
 @media (min-width: 576px) and (max-width: 991.98px) {
     :root {
         --carousel-size: 50px;
-        --carousel-gap: 6px;
+        --carousel-gap: 12px;
     }
 }
