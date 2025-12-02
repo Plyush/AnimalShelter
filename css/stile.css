@@ -1,5 +1,12 @@
 @import url(fonts.css);
 
+:root {
+    --carousel-size: 6vh;
+    /* default control diameter */
+    --carousel-gap: 10px;
+    /* base gap from edge */
+}
+
 .menu-bar {
     width: 100%;
     min-height: 300px;
@@ -207,7 +214,35 @@ li {
 }
 
 .carousel-control-prev,
+{
+margin-left: -100px;
+margin-right: -100px;
+border: 2px #f1cdb3 solid;
+background-color: #ffffff;
+width: 6vh;
+height: 6vh;
+border-radius: 50%;
+top: 50%;
+transform: translateY(-50%);
+visibility: visible !important;
+opacity: 1 !important;
+}
+
 .carousel-control-next {
+    margin-left: -100px;
+    margin-right: -100px;
+    border: 2px #f1cdb3 solid;
+    background-color: #ffffff;
+    width: 6vh;
+    height: 6vh;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+    {
     margin-left: -100px;
     margin-right: -100px;
     border: 2px #f1cdb3 solid;
@@ -727,26 +762,54 @@ body {
     }
 }
 
-/* Strong overrides to ensure controls are visible and not offset by earlier rules */
+/* Strong overrides: keep controls visible and restore their standard sides.
+   `.carousel-control-prev` — LEFT of the carousel; `.carousel-control-next` — RIGHT of the carousel. */
 .carousel-control-prev,
 .carousel-control-next {
     margin: 0 !important;
     visibility: visible !important;
     opacity: 1 !important;
+    z-index: 9999 !important;
+    pointer-events: auto !important;
 }
 
+/* Prev on the LEFT (standard) */
 .carousel-control-prev {
-    left: calc(10px + var(--carousel-size)) !important;
+    left: calc(var(--carousel-gap) + var(--carousel-size)) !important;
+    right: auto !important;
 }
 
+/* Next on the RIGHT (standard) */
 .carousel-control-next {
-    right: calc(10px + var(--carousel-size)) !important;
+    right: calc(var(--carousel-gap) + var(--carousel-size)) !important;
+    left: auto !important;
 }
 
-.carousel-control-prev:hover,
-.carousel-control-next:hover,
-.carousel-control-prev:focus,
-.carousel-control-next:focus {
-    box-shadow: none !important;
-    outline: none !important;
+/* Keep controls centered vertically */
+.carousel-control-prev,
+.carousel-control-next {
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+}
+
+/* Responsive sizes via variables */
+@media (max-width: 575.98px) {
+    :root {
+        --carousel-size: 40px;
+        --carousel-gap: 8px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+    :root {
+        --carousel-size: 50px;
+        --carousel-gap: 12px;
+    }
+}
+
+/* Ensure SVG icons scale well */
+.carousel-control-prev svg,
+.carousel-control-next svg {
+    width: calc(var(--carousel-size) * 0.6) !important;
+    height: calc(var(--carousel-size) * 0.6) !important;
 }
